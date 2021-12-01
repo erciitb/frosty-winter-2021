@@ -10,7 +10,7 @@
 
 <ol>
 	<li> <a href="#Preliminary"> Preliminary Installation </a> </li>
-	<li> <a href="#Getting"> Getting started with the ROS </a> </li>
+	<li> <a href="#Getting"> Getting started with ROS </a> </li>
 	<li> <a href="#PubSub">Publisher-Subscriber Interface </a></li>
 	<ol>
 		<li><a href="#Publisher"> Writing a simple Publisher Node </a></li>
@@ -68,7 +68,7 @@ Go to a particular link and put your first step in the world of ROS.
 	You are free to use a suitabe IDE to write code. The most commonly used IDE is **Visual Studio Code**. You can install it in your Ubuntu system and install **ROS VSCode Extention** in the VSCode application.
 
 
-## **Getting started with the ROS:**<a name="Getting"></a>
+## **Getting started with ROS:**<a name="Getting"></a>
 
 *Now that the installation is done, let’s dive into ROS!*
 

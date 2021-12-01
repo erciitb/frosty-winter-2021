@@ -1,5 +1,7 @@
 # A fROSty-Winter-2021
 
+<img src="W0_Images/Sherlock_Hi.gif">
+
 Hi!
 
 ## Objectives of this Workshop:

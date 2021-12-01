@@ -38,8 +38,10 @@ For using ROS framework, Ubuntu is necessary. So, follow any of the four alterna
 <span style="color:red">[WARNING], Do at your own risk! We will be not responsible if you lose your data. __Follow instructions carefully and make backups before you start!__</span> <br />
 *For absolute beginners, we recommend going for any one of the three alternatives mentioned below unless you're sure you want to dual-boot. Dual-booting can be a little daunting. And you can always opt for dual-booting once you're comfortable with linux.* <br/>
 
-	**Virtual Machine** : You can install a virtual machine and install ubuntu on that. Follow this [Tutorial](https://www.youtube.com/watch?v=x5MhydijWmc) in that case. (Installation of the Virtual Machine is also included in the tutorial)<br />
-	**WSL** : Follow this [Tutorial](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) to install WSL on your windows system.<br />
+	**Virtual Machine** : You can install a virtual machine and install ubuntu on that. Follow this [Tutorial](https://www.youtube.com/watch?v=x5MhydijWmc) in that case. (Installation of the Virtual Machine is also included in the tutorial)<br /><br />
+	**WSL** : In case you are on Windows 10, follow this [Tutorial](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) to install WSL on your windows system. However, in Windows 10 WSL does not natively support running GUI apps. In order to run GUI apps related to ROS, refer this [Tutorial](https://jack-kawell.com/2020/06/12/ros-wsl2/) from the section "Setting Up GUI Forwarding". **Note**: Do not follow the WSL installation section from the second link, only refer to the GUI forwarding section.<br />
+	
+	In case you are on Windows 11, WSL natively supports Linux GUI apps. You can check this [Tutorial](https://www.howtogeek.com/744328/how-to-install-the-windows-subsystem-for-linux-on-windows-11/) to set up WSL. <br /> <br />
 	**The Construct website** : You are also free to use [**theconstructsim**](https://www.theconstructsim.com/) without having to install anything. The Construct is an online platform that supports ROS development.
 
 </ul>

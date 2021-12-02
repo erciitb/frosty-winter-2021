@@ -2,7 +2,7 @@
 
 <img src="W0_Images/Sherlock_Hi.gif">
 
-Hi!
+Hi! Welcome to a **fROSty Winter**.
 
 Detective Sherlock Holmes's arch-nemesis Moriarty has escaped into the virtual world of simulations. He needs tech-savvy detectives with the knowledge of ROS, OpenCV, and Gazebo to catch Moriarty and end it once and for all.
 

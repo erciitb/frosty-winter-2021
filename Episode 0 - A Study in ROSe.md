@@ -108,7 +108,7 @@ Let’s create one ourselves. When we want to create packages, we need to work i
 Go to the src folder inside *catkin_ws* :
 
 ```bash
-cd ~/catkin_ws /src
+cd ~/catkin_ws/src
 ```
 
 The *src* directory is the folder that holds created packages. Those could be your own packages or packages that you copied from other sources e.g. A Github Repository.

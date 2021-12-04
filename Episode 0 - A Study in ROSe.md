@@ -30,7 +30,8 @@ Optional reading material has been provided in the form of links in many places 
 
 or even worse.
 
-Refer to [FAQs](https://github.com/erciitb/frosty-winter-2021/blob/main/FAQs.md) for installation.
+Refer to [FAQs](https://github.com/erciitb/frosty-winter-2021/blob/main/FAQs.md) for any issues or doubts regarding installation **first**.
+
 * __Ubuntu Installation__ :
 For using ROS framework, Ubuntu is necessary. So, follow any of the four alternatives for setting up the linux environment:
 (It's Preferable that you install Ubuntu 20.04)<br />

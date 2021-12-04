@@ -12,7 +12,7 @@ If you are planning to use Ubuntu furthur, dedicate **full D ( E or F )** drive 
 
 <img src="W0_Images/PubKey.jpeg" width=700 height=150>
 
-**Ans:**  Refer to the methods in this [link]() and hopefully the issue should be resolved.
+**Ans:**  Refer to the methods in this [link](https://answers.ros.org/question/325039/apt-update-fails-cannot-install-pkgs-key-not-working/) and hopefully the issue should be resolved.
 
 <br/>
 
@@ -21,3 +21,11 @@ If you are planning to use Ubuntu furthur, dedicate **full D ( E or F )** drive 
 <img src="W0_Images/apt_get_update.jpeg" width=700 height=300>
 
 **Ans:**  Run ```sudo apt-get update``` and WAIT ! It takes time for this step to completely finish and it might seem like nothing is happening. Be patient.
+
+<br/>
+
+**3.** I am getting the following error message. What to do ?
+
+<img src="W0_Images/Free_space.jpeg" width=800 height=50>
+
+**Ans:** Refer to the methods in this [link](https://askubuntu.com/questions/178909/not-enough-space-in-var-cache-apt-archives) and hopefully the issue should be resolved.

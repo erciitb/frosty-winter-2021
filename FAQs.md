@@ -8,10 +8,16 @@ If you are planning to use Ubuntu furthur, dedicate **full D ( E or F )** drive 
 
 ## ROS Installation
 
-**1.** Issue 
+**1.**  I am getting the following error message after running ```sudo apt update```. What to do ?
 
-**Ans:** Refer to the methods in this [link]() and hopefully the issue should be resolved.
+<img src="W0_Images/PubKey.jpeg" width=700 height=150>
 
-**2.** Issue
+**Ans:**  Refer to the methods in this [link]() and hopefully the issue should be resolved.
 
-**Ans:** Run ```sudo apt-get update``` and WAIT !
+<br/>
+
+**2.**  I am getting the following error message after running ```sudo apt install ros-noetic-desktop-full```. What to do ?
+
+<img src="W0_Images/apt_get_update.jpeg" width=700 height=300>
+
+**Ans:**  Run ```sudo apt-get update``` and WAIT ! It takes time for this step to completely finish and it might seem like nothing is happening. Be patient.

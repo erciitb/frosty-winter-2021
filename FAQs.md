@@ -29,3 +29,9 @@ If you are planning to use Ubuntu furthur, dedicate **full D ( E or F )** drive 
 <img src="W0_Images/Free_space.jpeg" width=800 height=50>
 
 **Ans:** Refer to the methods in this [link](https://askubuntu.com/questions/178909/not-enough-space-in-var-cache-apt-archives) and hopefully the issue should be resolved.
+
+**4.** I am getting the following error message after running ```sudo apt install ros-noetic-desktop-full```. What to do ?
+
+<img src="W0_Images/Broken_package.jpeg" width=700 height=250>
+
+**Ans:** TBD

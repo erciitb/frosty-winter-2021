@@ -140,6 +140,51 @@ Add the following code to launch Gazebo with ```wall.world```
 ```
 On executing  ```roslaunch epi1 custom_gazebo.launch```, Gazebo will be launched with the desired world.
 
+## Additional Material
+
+### Adding models to world
+
+Create ```models``` folder inside the ```epi1``` package. You need to make one folder for each model you want.
+
+Let's make a simple robot car model. Make a folder named ```robot_car``` inside the ```models``` folder. Download the xacro file ```robot_car.xacro``` and place it in the ```robot_car``` folder. This file describes the robot car model in a macro language called xacro.
+
+Now we need to convert it to URDF before spawning it in gazebo.
+
+Open the terminal in the ```robot_car``` folder and execute the command ```xacro robot_car.xacro > robot_car.urdf```. This command will create the file ```robot_car.urdf``` in the same folder. 
+
+Now you can launch the world using the ```roslaunch epi1 custom_gazebo.launch``` like ealier.
+
+To spawn this model into the above launched world, open the terminal in ```robot_car``` folder and execute the command ```rosrun gazebo_ros spawn_model -file `pwd`/robot_car.urdf -urdf -z 1 -model robot_car```. You will be able to see this model in the Gazebo GUI.
+
+#### Spawning models using launch file
+
+If you want to spawn the models when launching gazebo world. Add the following code to the launch file ( outside the ```<include>``` tag but inside the ```<launch>``` tag)
+```
+  <!-- This command builds the urdf files from the xacro files by calling the launch file -->
+  <param name="robot_car_description" command="$(find xacro)/xacro --inorder '$(find epi1)/models/robot_car/robot_car.xacro'"/>
+  
+  <!-- Spawn the robot after we built the urdf files -->
+  <node name="robot_car_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -param robot_car_description -model robot_car" />
+```
+These lines in the launch file do both jobs, converting xacro to urdf and spawning the urdf to gazebo.
+Now execute ```roslaunch epi1 custom_gazebo.launch``` to launch world and spawn the model into it.
+  
+### Adding Plugins to models
+  
+If you want to communicate with models, for example send velocity data to robots or obtain camera feed from a camera in gazebo, you need to add plugins to models. Let's add a plugin to the robot_car so that you acn move it. This plugin will allow you to send velocities to the robot_car model.
+  
+Download the ```robot_car.gazebo``` file and place it in the ```robot_car``` folder.
+Uncomment the line ```<xacro:include filename="$(find epi1)/models/robot_car/robot_car.gazebo" />``` in ```robot_car.xacro``` file that you downloaded earlier. 
+
+The ```robot_car.gazebo``` contains the ```differential_drive_controller``` plugin which you added to the ```robot_car``` model by uncommenting the line above.
+
+Now the launch the gazebo world using ```roslaunch epi1 custom_gazebo.launch```. You will see ```gazebo``` node subscribed to ```cmd_vel``` since we added the plugin.
+  
+To publish on ```cmd_vel``` topic execute ```rosrun teleop_twist_keyboard teleop_twist_keyboard.py```. Use the keys i,j,l and k to move the ```robot_car``` model.
+
+If teleop_twist_keyboard is not installed- execute ```sudo apt-get install ros-noetic-teleop-twist-keyboard``` for ROS noetic.
+
 ## Viziting Rviz ... <a name="Rviz"></a>
 
 ### What is it ?

@@ -146,7 +146,7 @@ On executing  ```roslaunch epi1 custom_gazebo.launch```, Gazebo will be launched
 
 Create ```models``` folder inside the ```epi1``` package. You need to make one folder for each model you want.
 
-Let's make a simple robot car model. Make a folder named ```robot_car``` inside the ```models``` folder. Download the xacro file [robot_car.xacro](https://github.com/erciitb/frosty-winter-2021/blob/main/robot_car%20model%20files/robot_car.xacro) and place it in the ```robot_car``` folder. This file describes the robot car model in a macro language called xacro.
+Let's make a simple robot car model. Make a folder named ```robot_car``` inside the ```models``` folder. Download the xacro file [robot_car.xacro](https://github.com/erciitb/frosty-winter-2021/blob/main/robotic_car%20model%20files/robot_car.xacro) and place it in the ```robot_car``` folder. This file describes the robot car model in a macro language called xacro.
 
 Now we need to convert it to URDF before spawning it in gazebo.
 
@@ -174,7 +174,7 @@ Now execute ```roslaunch epi1 custom_gazebo.launch``` to launch world and spawn 
   
 If you want to communicate with models, for example send velocity data to robots or obtain camera feed from a camera in gazebo, you need to add plugins to models. Let's add a plugin to the robot_car so that you acn move it. This plugin will allow you to send velocities to the robot_car model.
   
-Download the [robot_car.gazebo](https://github.com/erciitb/frosty-winter-2021/blob/main/robot_car%20model%20files/robot_car.gazebo) file and place it in the ```robot_car``` folder.
+Download the [robot_car.gazebo](https://github.com/erciitb/frosty-winter-2021/blob/main/robotic_car%20model%20files/robot_car.gazebo) file and place it in the ```robot_car``` folder.
 Uncomment the line ```<xacro:include filename="$(find epi1)/models/robot_car/robot_car.gazebo" />``` in ```robot_car.xacro``` file that you downloaded earlier. 
 
 The ```robot_car.gazebo``` contains the ```differential_drive_controller``` plugin which you added to the ```robot_car``` model by uncommenting the line above.

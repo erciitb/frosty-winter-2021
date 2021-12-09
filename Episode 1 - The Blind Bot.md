@@ -737,7 +737,7 @@ Additionally, one can try writing code for publishers and subscribers in differe
 3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
 4. Launch ```escape.launch```
 5. The bots will begin exploring the room while avoiding obstacles. In this process, clues will be uncovered from which you as the observer should deduce the escape code.
-6. The code is the password for the password-protected PDF file ```Task1_certificate.pdf```. Type the password and see what will awaits you!
+6. The code is the password for the password-protected PDF file ```Task1_certificate.pdf```. Type the password and see what awaits you!
 
 Have fun!
 

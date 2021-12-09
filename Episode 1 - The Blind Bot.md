@@ -724,24 +724,27 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 # Let's play a game, shall we ... 
 
-**Sherlock** and **Watson** are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them. You, the observer will be able to view the bots and what they detect through **Rviz** only.
+**Sherlock** and **Watson** (the bots obviously!) are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them. You, the observer will be able to view the bots and what they detect through **Rviz** only.
 
 <img src="W1_Images/Escape.png" width="500" height="400">
 
 ## Steps
 1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
-2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` from the link below and add them to the ```worlds```,```launch``` and ```configs``` folder respectively. **DO NOT** modify these files.
+2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` from the link below and add them to the ```worlds```,```launch``` and ```configs``` folder respectively. Also download the ```Task1_certificate.pdf```. **DO NOT** modify these files.
 
-[Files](https://github.com/erciitb/frosty-winter-2021/tree/main/Task%201_files)
+    [Files](https://github.com/erciitb/frosty-winter-2021/tree/main/Task%201_files)
 
 3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
 4. Launch ```escape.launch```
-5. The bots will begin exploring the room while avoiding obstacles. In this process, clues will be uncovered which you can observe and infer from.
-6. From the inferences, determine the code.
-7. The code is the password for the password-protected PDF file. Type the password and see what will happen!
-
-**Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world```, ```turtlebot3_world.world```, ```turtlebot3_house.world``` and improve upon the algorithm over time.
+5. The bots will begin exploring the room while avoiding obstacles. In this process, clues will be uncovered from which you as the observer should deduce the escape code.
+6. The code is the password for the password-protected PDF file ```Task1_certificate.pdf```. Type the password and see what will awaits you!
 
 Have fun!
 
 <img src="W1_Images/Code.gif">
+
+## Submission details
+
+**Tentative deadline** - December 2021 11:59 PM
+
+**Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world```, ```turtlebot3_world.world```, ```turtlebot3_house.world``` and improve upon the algorithm over time. Submitting a simple algorithm that does the basic task of avoidance and exploration is good enough.

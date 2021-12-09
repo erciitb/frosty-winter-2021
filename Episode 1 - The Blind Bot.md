@@ -721,3 +721,25 @@ To know more about the TurtleBot3 and explore it various capabilities like navig
 [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
 
 Additionally, one can try writing code for publishers and subscribers in different ways apart from the prescribed style, such as using **classes**. We shall leave that up to you for exploration. Have fun.
+
+# Let's play a game, shall we ... 
+
+**Sherlock** and **Watson** are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them. You, the observer will be able to view the bots and what they detect through **Rviz** only.
+
+<img src="W1_Images/Escape.png" width="500" height="400">
+
+## Steps
+1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
+2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` from the link below and add them to the ```worlds```,```launch``` and ```configs``` folder respectively. **DO NOT** modify these files.
+[Files]()
+3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
+4. Launch ```escape.launch```
+5. The bots will begin exploring the room while avoiding obstacles. In this process, clues will be uncovered which you can observe and infer from.
+6. From the inferences, determine the code.
+7. The code is the password for the password-protected PDF file. Type the password and see what will happen!
+
+**Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world```, ```turtlebot3_world.world```, ```turtlebot3_house.world``` and improve upon the algorithm over time.
+
+Have fun!
+
+<img src="W1_Images/Code.gif">

@@ -23,7 +23,7 @@ Let's begin !
 
 ## Initial preparation
 
-Create a package ```epi1``` in ```catkin_ws```, with ```scripts```,```launch```, ```worlds``` and ```configs``` folders. This will be required for storing the various files that will be created throughout.
+Create a package ```epi1``` in ```catkin_ws```, with ```scripts```,```launch```, ```worlds``` and ```configs``` folders. This will be required for storing the various files that will be created throughout. Recall how to make a package from week 0. Use the roscpp, rospy, std_msgs dependencies.
 
 ## Gaze at Gazebo ... <a name="Gazebo"></a>
 
@@ -86,14 +86,14 @@ To save a world,
 
 1. Go to **File > Save World As (Ctrl + Shift + S)**
   
-2. Go to the appropriate folder (```epi1 > worlds```), give an appropriate name (```wall```) and save
+2. Go to the appropriate folder (```epi1 > worlds```), give an appropriate name (```wall.world```) and save
  
  
 To load the world,
 
 1. ```cd``` to the directory containing the world file (```worlds``` in this case) in the terminal
   
-2. Execute  ```gazebo wall```
+2. Execute  ```gazebo wall.world```
  
  
 **Optional Reading**-[Building a world](http://gazebosim.org/tutorials?cat=build_world)

@@ -750,7 +750,7 @@ Have fun!
 
 ### Mode of Submission
 
-The submission link is attached below.  Add ```bot_avoidance.py``` to a Google Drive folder and submit the link through the form. 
+The submission link is attached below.  Add ```bot_avoidance.py``` to a Google Drive folder and submit the link to the folder through the form. 
 
 [Submission Link](https://forms.gle/V8uFe4nnEHsCqm9T9)
 

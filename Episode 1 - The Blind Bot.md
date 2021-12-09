@@ -749,7 +749,20 @@ Have fun!
 16 December 2021, 11:59 PM
 
 ### Mode of Submission
-To be announced
+
+The submission link is attached below.  Add ```bot_avoidance.py``` to a Google Drive folder and submit the link through the form. 
+
+[Submission Link](https://forms.gle/V8uFe4nnEHsCqm9T9)
+
+Access the form below using your respective IITB LDAP ID.
+
+Also, make sure to change the settings as follows-
+
+**Share > Get link > Indian Institute of Technology Bombay**
+
+or
+
+**Share > Get link > Anyone with the link**
 
 
 ### Points to be noted 

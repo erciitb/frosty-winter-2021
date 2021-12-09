@@ -731,7 +731,9 @@ Additionally, one can try writing code for publishers and subscribers in differe
 ## Steps
 1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
 2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` from the link below and add them to the ```worlds```,```launch``` and ```configs``` folder respectively. **DO NOT** modify these files.
-[Files]()
+
+[Files](https://github.com/erciitb/frosty-winter-2021/tree/main/Task%201_files)
+
 3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
 4. Launch ```escape.launch```
 5. The bots will begin exploring the room while avoiding obstacles. In this process, clues will be uncovered which you can observe and infer from.

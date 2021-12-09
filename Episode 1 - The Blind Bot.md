@@ -749,7 +749,7 @@ Have fun!
 16 December 2021, 11:59 PM
 
 ### Mode of Submission
-TBD
+To be announced
 
 
 ### Points to be noted 

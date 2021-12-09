@@ -1,0 +1,76 @@
+<launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find task_1)/worlds/arena"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="false"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+
+  <group ns="sherlock">
+
+    <arg name="model" default="waffle" doc="model type [burger, waffle, waffle_pi]"/>
+    <arg name="x_pos" default="0"/>
+    <arg name="y_pos" default="-0.5"/>
+    <arg name="z_pos" default="0.0"/>
+    <arg name="yaw" default="-1.57"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro " />
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg yaw) -param robot_description "  />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="sherlock"/>
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="sherlock_odom" args="0 0 0 0 0 0 1 odom sherlock/odom 100" />
+
+  </group>
+
+  
+  <group ns="watson">
+
+    <arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
+    <arg name="x_pos" default="0"/>
+    <arg name="y_pos" default="0.5"/>
+    <arg name="z_pos" default="0.0"/>
+    <arg name="yaw" default="1.57"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro " /> 
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg yaw) -param robot_description" />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="watson"/>
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="watson_odom" args="0 0 0 0 0 0 1 odom watson/odom 100" />
+
+  </group>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find task_1)/configs/observe.rviz"/>
+  
+  
+  <node name="sherlock_move" pkg="task_1" type="bot_avoidance.py">
+    <remap from="/cmd_vel" to="sherlock/cmd_vel"/>
+    <remap from="/scan" to="sherlock/scan"/>
+  </node>
+
+  <node name="watson_move" pkg="task_1" type="bot_avoidance.py">
+    <remap from="/cmd_vel" to="watson/cmd_vel"/>
+    <remap from="/scan" to="watson/scan"/>
+  </node>
+  
+  
+
+ 
+</launch>

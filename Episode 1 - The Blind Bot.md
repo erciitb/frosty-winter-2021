@@ -746,10 +746,14 @@ Have fun!
 ## Submission details
 
 ### Tentative deadline
-16 December 2021 11:59 PM
+16 December 2021, 11:59 PM
 
 ### Mode of Submission
 TBD
 
 
-**Note** - Submitting a simple algorithm that does the basic task of avoidance and exploration is good enough for this task. You will realize over time that a simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be in all shapes and orientations. You can experiment, test in different environments like ```wall.world```, ```turtlebot3_world.world```, ```turtlebot3_house.world``` and improve the algorithm over time if the problem of obstacle avoidance and exploration continues to interest you.
+### Points to be noted 
+
+1. Submitting a simple algorithm that does the basic task of avoidance and exploration is good enough for this task. You will realize over time that a simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be in all shapes and orientations. You can experiment, test in different environments like ```wall.world```, ```turtlebot3_world.world```, ```turtlebot3_house.world``` and improve the algorithm over time if the problem of obstacle avoidance and exploration continues to interest you.
+
+2. If you are in a team, it is advised that you work with your team member for greater efficiency.

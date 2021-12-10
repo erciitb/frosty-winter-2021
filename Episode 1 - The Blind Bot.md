@@ -172,7 +172,7 @@ Now execute ```roslaunch epi1 custom_gazebo.launch``` to launch world and spawn 
   
 ### Adding Plugins to models
   
-If you want to communicate with models, for example send velocity data to robots or obtain camera feed from a camera in gazebo, you need to add plugins to models. Let's add a plugin to the robot_car so that you acn move it. This plugin will allow you to send velocities to the robot_car model.
+If you want to communicate with models, for example send velocity data to robots or obtain camera feed from a camera in gazebo, you need to add plugins to models. Let's add a plugin to the robot_car so that you can move it. This plugin will allow you to send velocities to the robot_car model.
   
 Download the [robot_car.gazebo](https://github.com/erciitb/frosty-winter-2021/blob/main/robotic_car%20model%20files/robot_car.gazebo) file and place it in the ```robot_car``` folder.
 Uncomment the line ```<xacro:include filename="$(find epi1)/models/robot_car/robot_car.gazebo" />``` in ```robot_car.xacro``` file that you downloaded earlier. 

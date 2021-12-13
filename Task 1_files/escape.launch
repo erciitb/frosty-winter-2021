@@ -4,7 +4,7 @@
     <arg name="world_name" value="$(find task_1)/worlds/arena"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="false"/>
+    <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
@@ -57,9 +57,6 @@
 
   </group>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find task_1)/configs/observe.rviz"/>
-  
-  
   <node name="sherlock_move" pkg="task_1" type="bot_avoidance.py">
     <remap from="/cmd_vel" to="sherlock/cmd_vel"/>
     <remap from="/scan" to="sherlock/scan"/>

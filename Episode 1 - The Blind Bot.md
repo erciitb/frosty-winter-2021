@@ -613,105 +613,6 @@ On executing ```roslaunch epi1 2bots.launch```, you should be able to see two bo
 
 <img src="W1_Images/2bots_gazebo.png" width=400 height=400>
 
-## Visualizing Multiple bots in Rviz
-
-### Saving a new configuration
-
-We would like to save a configuration beforehand that will enable us to view the bots and the laser scan data conveniently.
-
-1. Change the **Fixed Frame** to ```odom```
-<img src="W1_Images/Odom_fixedframe.png" width=350 height=200>
-
-2. Change the angle to approximately -1.57 (this is optional)
-<img src="W1_Images/ChangeAngle.png" width=150 height=200>
-
-3. Add a **Robot Model** and rename it as **Sherlock**. Change the **Robot Description** to **sherlock/robot_description** and **TF Prefix** to **sherlock**
-<img src="W1_Images/Sherlock_RobotModel.png" width=250 height=400>
-
-4. Similarly, add another **Robot Model** and rename it as **Watson**. Change the **Robot Description** to **watson/robot_description** and **TF Prefix** to **watson**
-<img src="W1_Images/Watson_RobotModel.png" width=200 height=150>
-
-5. Add a **Laser Scan** and rename it as **Sherlock_Laser Scan**. Change the **Topic** to **sherlock/scan**
-<img src="W1_Images/Sherlock_LaserScan.png" width=200 height=150>
-
-6. Add a **Laser Scan** and rename it as **Watson_Laser Scan**. Change the **Topic** to **watson/scan**
-<img src="W1_Images/Watson_LaserScan.png" width=200 height=150>
-
-After making the above changes, save the configuration as ```2bots.rviz``` in the ```configs``` folder of ```epi1```
-
-### Modified launch file
-
-Adding  ``` <node name="rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/configs/2bots.rviz"/>``` to the previous version of the launch file gives the required file
-
-```xml
-<launch>
-  
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_world.world"/>
-    <arg name="paused" value="false"/>
-    <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="true"/>
-    <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
-  </include>
-
-
-  <group ns="sherlock">
-
-    <arg name="model" default="waffle" doc="model type [burger, waffle, waffle_pi]"/>
-    <arg name="x_pos" default="-0.5"/>
-    <arg name="y_pos" default="-0.5"/>
-    <arg name="z_pos" default="0.0"/>
-
-    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro " />
-
-    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description "  />
-
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-
-    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
-      <param name="publish_frequency" type="double" value="50.0" />
-      <param name="tf_prefix" value="sherlock"/>
-    </node>
-
-    <node pkg="tf" type="static_transform_publisher" name="sherlock_odom" args="0 0 0 0 0 0 1 odom sherlock/odom 100" />
-
-  </group>
-
-
-  
-  <group ns="watson">
-
-    <arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
-    <arg name="x_pos" default="-0.5"/>
-    <arg name="y_pos" default="-1.5"/>
-    <arg name="z_pos" default="0.0"/>
-
-    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro " /> 
-
-    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
-
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-
-    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
-      <param name="publish_frequency" type="double" value="50.0" />
-      <param name="tf_prefix" value="watson"/>
-    </node>
-
-    <node pkg="tf" type="static_transform_publisher" name="watson_odom" args="0 0 0 0 0 0 1 odom watson/odom 100" />
-
-  </group>
-
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/configs/2bots.rviz"/>
-  
-
-</launch>
-```
-
-On executing ```roslaunch epi1 2bots.launch```, you should be able to see the Sherlock and Watson bots beside each other in Rviz as well. Lovely!
-
-<img src="W1_Images/2bots_rviz.png" width=400 height=400>
-
 ## Way ahead
 
 Now that you have gained the ability to write code to move the bot around and sense the surroundings, what you can do with the bot is restricted only by your imagination. 
@@ -727,8 +628,8 @@ Additionally, one can try writing code for publishers and subscribers in differe
 **Sherlock** and **Watson** (the bots obviously!) are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them.
 
 ## Steps
-1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
-2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` from the link below and add them to the ```worlds```,```launch``` and ```configs``` folder respectively. Also download the ```Task1_certificate.pdf```. **DO NOT** modify these files.
+1. Create a package ```task_1``` with ```scripts```,```launch``` and ```worlds```  folders.
+2. Download the ```arena.world``` and ```escape.launch``` from the link below and add them to the ```worlds``` and ```launch``` folder respectively. Also download the ```Task1_certificate.pdf```. **DO NOT** modify these files.
 
     [Task 1_files](https://github.com/erciitb/frosty-winter-2021/tree/main/Task%201_files)
 

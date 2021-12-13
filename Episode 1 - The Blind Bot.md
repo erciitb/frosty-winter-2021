@@ -724,9 +724,7 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 # Let's play a game, shall we ... 
 
-**Sherlock** and **Watson** (the bots obviously!) are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them. You, the observer will be able to view the bots and what they detect through **Rviz** only.
-
-<img src="W1_Images/Escape.png" width="500" height="400">
+**Sherlock** and **Watson** (the bots obviously!) are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them.
 
 ## Steps
 1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.

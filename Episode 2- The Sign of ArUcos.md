@@ -11,12 +11,12 @@ ArUco marker is a grid of black and white squares, typically a 5x5 grid, which l
 
 ArUco markers are used to for camera pose estimation, or calibration of the bot. In an ArUco marker, black box represents the number 0 and white box represents the number 1. So going by this, let us breakdown the above marker into grid. Also note that ArUco markers have a black border(padding) of 1 unit around them to make their detection easier, so that is neglected below.
 
-![This is an image](https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/Grid%20for%20aruco%20marker.png)
+![This is an image](W2_Images/Grid%20for%20aruco%20marker.png)
 
 Here the second and fourth column are the data bits, and the rest three are parity bits. Parity bits are usually used as a error detection and in this case they also help out in figuring out the orientation of the marker. The Parity1 and Parity3 are even parity bits and Parity2 is odd parity bit. You may read more about parity bits [here](https://en.wikipedia.org/wiki/Parity_bit). Below is the order according to which they are calculated.
 
 
-<img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/Parity%20bits%20order.png" data-canonical-src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/Parity%20bits%20order.png" width="600" />
+<img src="W2_Images/Parity%20bits%20order.png" data-canonical-src="W2_Images/Parity%20bits%20order.png" width="600" />
 
 It's fine if you don't understand what parity bits are, as that part is taken care by the computer.
 
@@ -24,7 +24,7 @@ Finally, coming back to data bits(read them horizontally), the above grid displa
 
 Let’s see whether you have understood the above info, find out what number does the below ArUco marker represent.(Remember, the second and fourth columns are data bits.) You can also cross-check whether the parity bits are proper or not.
 
-![This is an image](https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/Example%20aruco.png)
+![This is an image](W2_Images/Example%20aruco.png)
 
 *Answer: The number represented by the bits is 100(in decimal)*
 
@@ -32,7 +32,7 @@ Alright, so now we understand what ArUco markers are, we need to find a way so t
 
 ## OpenCV
 
-<img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/opencv_logo.png" width="320" height = "150">
+<img src="W2_Images/opencv_logo.png" width="320" height = "150">
 
 OpenCV (Open-Source Computer Vision Library) is an open-source library that includes several hundreds of computer vision algorithms. It helps us in performing various operations on images very easily.
 
@@ -119,7 +119,7 @@ Congrats! Now we are all set and can start with learning OpenCV!
       **BGR:** stores individual values of Red Green Blue and an alpha channel to show transparency </br>
       **HSV (Hue, saturation, value):** an alternate form of RGB colour space that is similar to human vision perception and helpful for image identification. </br>
 
-    <p align="center"> <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/GRAY_img.jpg" width="200" height = "200"> &nbsp; &nbsp; <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/BGR_img.png" width="200" height = "200"> &nbsp; &nbsp; <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/HSV_img.jpg" width="200" height = "200"> </p> </br>
+    <p align="center"> <img src="W2_Images/GRAY_img.jpg" width="200" height = "200"> &nbsp; &nbsp; <img src="W2_Images/BGR_img.png" width="200" height = "200"> &nbsp; &nbsp; <img src="W2_Images/HSV_img.jpg" width="200" height = "200"> </p> </br>
     
     _Syntax_ - ```cv2.cvtColor( source , conversion_code)``` </br>
     _Parameters_ - </br>
@@ -247,11 +247,11 @@ if cv2.waitKey(0) & 0xFF==ord('s'):
 
     1)	Using the functions that we learned in this module, recreate this iconic ```wallpaper_modified.jpg``` by drawing on ```wallpaper.jpg```.
     
-    <p align="center"> <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/wallpaper_modified.jpg"  width="350" height="250"> </p>
+    <p align="center"> <img src="W2_Images/wallpaper_modified.jpg"  width="350" height="250"> </p>
     
     2)	Help Sherlock unlock Adler’s phone by using the ```putTEXT``` command over the textboxes. I hope you already know the password
 
-    <p align="center"> <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/locked.jpg"  width="200" height="350"> </p> 
+    <p align="center"> <img src="W2_Images/locked.jpg"  width="200" height="350"> </p> 
 
 ### Module 3: Arithmetic Operations on Images
   
@@ -345,7 +345,7 @@ if cv2.waitKey(0) & 0xFF==ord('s'):
 	  if cv2.waitKey(0) & 0xff == ord('s'):
 	    cv2.destroyAllWindows()
 	  ```
-	  <p align="center"> <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/yinyang_square.jpg" width="300" height="180"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/yinyang_circle.jpg" width="300" height="180"> </p>
+	  <p align="center"> <img src="W2_Images/yinyang_square.jpg" width="300" height="180"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="W2_Images/yinyang_circle.jpg" width="300" height="180"> </p>
 	  
 	  Now we are ready to operate on these two images. </br>
 	  The syntax and the usage for all of these functions is pretty intuitive and easy to interpret. But do give each of them a try and see the results for yourself. </br>
@@ -372,7 +372,7 @@ if cv2.waitKey(0) & 0xFF==ord('s'):
 	 
 	 ### Moving forward with OpenCV
 	  
-	  <img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/I%20haven't%20finished%20yet.gif" width="520" height="300">
+	  <img src="W2_Images/I%20haven't%20finished%20yet.gif" width="520" height="300">
 	  
 	  You might be wondering the practical applications of using Arithmetic and Bitwise Operations on images. But they have a very specific use in watermarks and logos. Do check out the [official documentation](https://docs.opencv.org/4.x/d0/d86/tutorial_py_image_arithmetics.html) of OpenCV to gain some insights on this.
 	  
@@ -445,7 +445,7 @@ Now that we are familiar with the basics of OpenCV, ArUco and ROS, we can finall
 Unfortunately, in ROS, the format of the images being processed (ROS image Message) is quite different than that used in OpenCV (cv::Mat). This is where the library  cv_bridge comes to the rescue! </br>
 We create a publisher-subscriber model to import and export images out of ROS into OpenCV and back into ROS. 
 
-<img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_Images/cvbridge3.png" width="300" height="330">
+<img src="W2_Images/cvbridge3.png" width="300" height="330">
 
 ### Let us start with a simple example.
 Suppose, we are getting Image data on ```/camera/rgb/image_raw``` topic. 
@@ -715,5 +715,5 @@ Now, go ahead and solve the maze. :)
 
 ### That's the end of Week 2! Cheers!
 
-<img src="https://github.com/Pranav-Malpure/fROSty-Winter-Week-2/blob/main/W2_W2_Images/sherlock_toast.jpg" height="300" width="450">
+<img src="W2_Images/sherlock_toast.jpg" height="300" width="450">
 

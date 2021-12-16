@@ -645,7 +645,7 @@ Have fun!
 ## Submission details
 
 ### Tentative deadline
-16 December 2021, 11:59 PM
+19 December 2021, 11:59 PM
 
 ### Mode of Submission
 

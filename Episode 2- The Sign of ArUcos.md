@@ -500,7 +500,7 @@ if __name__ == '__main__':
 Open the Terminal and run following commands-
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/Tejas2910/aruco_detection/tree/python3_noetic
+git clone -b python3_noetic --single-branch https://github.com/Tejas2910/aruco_detection
 cd ~/catkin_ws
 catkin_make
 ```

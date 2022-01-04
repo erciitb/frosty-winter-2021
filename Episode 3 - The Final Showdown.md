@@ -256,6 +256,8 @@ Before we proceed to the task for this week, we first present a few points that 
 
 We now head towards the task for this week.
 
+Task 2 will be released shortly.
+
 
 
  

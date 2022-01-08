@@ -258,7 +258,7 @@ We now head towards the task for this week.
 
 # Final Task
 
-So finally we have reached the ultimate task of the workshop.  
+So finally we have reached towards the final task of the workshop.  
 
 <img src="Images/Screenshot%20from%202022-01-08%2023-26-41.jpg" width=500 height=500>
 

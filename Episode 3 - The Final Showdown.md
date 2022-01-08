@@ -260,7 +260,7 @@ We now head towards the task for this week.
 
 So finally we have reached towards the final task of the workshop.  
 
-<img src="Images/Screenshot%20from%202022-01-08%2023-26-41.jpg" width=500 height=500>
+<img src="Task 2_files/benedict-cumberbatch-oh.gif" width=500 height=500>
 
 We hope you have gone through all the episodes and had a great time learning. If you have any doubts you can reach out to us.
 
@@ -273,7 +273,7 @@ git clone -b python2_melodic --single-branch https://github.com/Tejas2910/aruco_
 cd ~/catkin_ws
 catkin_make
 ```
-<img src="Images/Screenshot%20from%202022-01-08%2023-26-41.jpg" width=600 height=400>
+<img src="Task 2_files/final_maze.jpg" width=600 height=400>
 
 ## Some points to Remember
 

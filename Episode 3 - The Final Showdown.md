@@ -310,7 +310,7 @@ We have given helper code in it, you have to edit this file to complete task2
 
 The submission link is attached below.  Add ```navigator.py``` to a Google Drive folder and submit the link to the folder through the form. 
 
-[Submission Link](https://docs.google.com/forms/d/1G5P6EqT_BGm6TchJohJotg2-lEN9Eg4BPtun0u0wKWE/edit?usp=sharing)
+[Submission Link](https://forms.gle/5Hykdy99GwivUMjt7)
 
 Access the form below using your respective IITB LDAP ID.
 

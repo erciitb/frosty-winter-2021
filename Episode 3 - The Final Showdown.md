@@ -301,6 +301,26 @@ Cool!!
 In scripts folder, you will see one more file navigator.py 
 We have given helper code in it, you have to edit this file to complete task2
 
+## Submission details
+
+### Tentative deadline
+16 January 2021, 11:59 PM
+
+### Mode of Submission
+
+The submission link is attached below.  Add ```navigator.py``` to a Google Drive folder and submit the link to the folder through the form. 
+
+[Submission Link](https://docs.google.com/forms/d/1G5P6EqT_BGm6TchJohJotg2-lEN9Eg4BPtun0u0wKWE/edit?usp=sharing)
+
+Access the form below using your respective IITB LDAP ID.
+
+Also, make sure to change the settings as follows-
+
+**Share > Get link > Indian Institute of Technology Bombay**
+
+or
+
+**Share > Get link > Anyone with the link**
 
 
 

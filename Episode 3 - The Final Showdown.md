@@ -301,7 +301,7 @@ Cool!!
 In scripts folder, you will see one more file navigator.py 
 We have given helper code in it, you have to edit this file to complete task2
 
-**Note:** If ArUco shows left deirection follow right hand side wall. If ArUco shows right direction follow left hand side wall. 
+**Note:** If ArUco shows left direction follow right hand side wall. If ArUco shows right direction follow left hand side wall. 
 
 If you write a code which follow, If ArUco shows left deirection turn left and if it shows right direction turn right. Then use final_maze2.world file.
 

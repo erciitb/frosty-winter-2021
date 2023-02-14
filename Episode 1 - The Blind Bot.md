@@ -128,7 +128,7 @@ Add the following code to launch Gazebo with ```wall.world```
 ```
 <launch>
 <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find epi1)/worlds/wall"/>
+    <arg name="world_name" value="$(find epi1)/worlds/wall.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>

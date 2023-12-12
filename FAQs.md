@@ -34,4 +34,19 @@ If you are planning to use Ubuntu furthur, dedicate **full D ( E or F )** drive 
 
 <img src="W0_Images/Broken_package.jpeg" width=700 height=250>
 
-**Ans:** TBD
+**Ans:** Run the following commands :
+
+sudo apt-get install aptitude <br/>
+sudo aptitude install ros-noetic-desktop-full  <br/> 
+Y  <br/>
+sudo aptitude install ros-noetic-desktop-full  <br/>
+n  <br/>
+n  <br/>
+Y  <br/>
+sudo apt update  <br/>
+sudo apt upgrade  <br/>
+sudo apt-get upgrade  <br/>
+sudo apt dist-upgrade  <br/>
+sudo apt autoremove  <br/>
+sudo apt install ros-noetic-desktop    # now this should work !  <br/>
+

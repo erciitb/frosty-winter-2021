@@ -279,7 +279,7 @@ A topic has a message type (similar to the data type of a variable). All publish
 
 You can create a publisher or subscriber in any ROS supported language you want, directly inside ROS nodes.
 
-When a node wants to publish something, it will inform the ROS master. When another node wants to subscribe to a topic, it will ask the ROS master form where it can get the data.
+When a node wants to publish something, it will inform the ROS master. When another node wants to subscribe to a topic, it will ask the ROS master from where it can get the data.
 (The rosmaster package implements the ROS Master. Most programs will not need to interact with this package directly. The rosmaster is run automatically whenever `roscore` is run and all communication with the Master happens over XMLRPC APIs.)
 
 Finally, a node can contain many publishers and subscribers for many different topics.

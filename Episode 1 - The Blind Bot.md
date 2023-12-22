@@ -318,6 +318,15 @@ Let us see the bot in action in Gazebo !
 To summon the bot in an **empty world** in **Gazebo**, execute the following command in a new terminal.
 
 ```
+sudo apt install ros-noetic-hls-lfcd-lds-driver
+cd ~/catkin_ws/src/
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations
+cd ~/catkin_ws && catkin_make
+cd
+
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ```
 
